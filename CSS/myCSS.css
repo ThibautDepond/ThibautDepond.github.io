@@ -43,6 +43,10 @@ nav{
     padding-right: 1%
 }
 
+a {
+    text-decoration: none
+}
+
 .nava{
     display: flex;
     flex-direction: row;
@@ -63,6 +67,7 @@ nav{
 
 .hosted{
     margin: 0;
+    size: 1rem;
     align-self: flex-end;
 }
 
