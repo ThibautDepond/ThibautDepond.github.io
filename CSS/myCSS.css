@@ -61,6 +61,7 @@ a {
 }
 .nava a:hover{
     background-color: white;
+    border-radius: 1rem 1rem 0 0;
     border-bottom: 5px solid var(--secondary-color);
     border-top: 5px solid var(--primary-color);
 }
