@@ -6,27 +6,24 @@ const urls = [
 ]
 
 document.body.onload = function(){
-    alert("LOADED!")
     build()
   }
 
 export const build = () => {
   const header = document.getElementsByTagName('header') 
-  if (!header.hasChildNodes()) {
-    const nav = document.createElement('nav')
-    const title = document.createElement('h1')
-    title.appendChild(document.createTextNode('Hello Banana'))
-    nav.appendChild(h1)
-    const navdiv = document.createElement('div')
-    navdiv.classList.add('nava')
-    nav.appendChild(navdiv)
-    for (let a in urls) {
-      const link = document.createElement('a')
-      link.href = a.url
-      if (a.blank) link.target ='_blank'
-      link.appendChild(document.createTextNode(a.text))
-      nav.appendChild(link)
-    }
-    header.appendChild(nav)
+  const nav = document.createElement('nav')
+  const title = document.createElement('h1')
+  title.appendChild(document.createTextNode('Hello Banana'))
+  nav.appendChild(h1)
+  const navdiv = document.createElement('div')
+  navdiv.classList.add('nava')
+  nav.appendChild(navdiv)
+  for (let a in urls) {
+    const link = document.createElement('a')
+    link.href = a.url
+    if (a.blank) link.target ='_blank'
+    link.appendChild(document.createTextNode(a.text))
+    nav.appendChild(link)
   }
+  header.appendChild(nav)
 }
