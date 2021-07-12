@@ -1,3 +1,5 @@
+import { buildUseless } from './useless.js'
+
 const urls = [
     {url:'index.html', text:'Home', blank:false}, 
     {url:'https://www.linkedin.com/in/thibaut-depond-165b7bbb/', text:'Linkedin', blank: true},
@@ -7,11 +9,11 @@ const urls = [
 
 document.body.onload = function(){
     build()
+    if (document.URL.includes('useless.html')) buildUseless()
   }
 
 export const build = () => {
-  const header = document.getElementsByTagName('header').0 
-  console.log(header)
+  const header = document.getElementById('head')
   const nav = document.createElement('nav')
   const title = document.createElement('h1')
   title.appendChild(document.createTextNode('Hello Banana'))
@@ -19,12 +21,13 @@ export const build = () => {
   const navdiv = document.createElement('div')
   navdiv.classList.add('nava')
   nav.appendChild(navdiv)
-  for (let a in urls) {
+  for (let a of urls) {
+    console.log(a)
     const link = document.createElement('a')
     link.href = a.url
     if (a.blank) link.target ='_blank'
     link.appendChild(document.createTextNode(a.text))
-    nav.appendChild(link)
+    navdiv.appendChild(link)
   }
   header.appendChild(nav)
 }
