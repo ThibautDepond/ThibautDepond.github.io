@@ -1,1 +1,1 @@
-import hey from './autoload.js'
+import { build } from './autoload.js'
