@@ -10,7 +10,7 @@ document.body.onload = function(){
   }
 
 export const build = () => {
-  const header = document.getElementsByTagName('header') 
+  const header = document.getElementsByTagName('header').0 
   console.log(header)
   const nav = document.createElement('nav')
   const title = document.createElement('h1')
