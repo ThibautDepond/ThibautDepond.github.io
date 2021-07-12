@@ -5,7 +5,7 @@ const urls = [
     {url:'useless.html', text:'Useless', blank: false},
 ]
 
-export const buildheader = () => {
+export default const buildheader = () => {
   const header = document.getElementsByTagName('header') 
   if (!header.hasChildNodes()) {
     const nav = document.createElement('nav')
