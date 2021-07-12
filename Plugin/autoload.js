@@ -14,7 +14,7 @@ export const build = () => {
   const nav = document.createElement('nav')
   const title = document.createElement('h1')
   title.appendChild(document.createTextNode('Hello Banana'))
-  nav.appendChild(h1)
+  nav.appendChild(title)
   const navdiv = document.createElement('div')
   navdiv.classList.add('nava')
   nav.appendChild(navdiv)
