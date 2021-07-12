@@ -5,7 +5,12 @@ const urls = [
     {url:'useless.html', text:'Useless', blank: false},
 ]
 
-export default function() {
+document.body.onload = function(){
+    alert("LOADED!")
+    build()
+  }
+
+export const build = () => {
   const header = document.getElementsByTagName('header') 
   if (!header.hasChildNodes()) {
     const nav = document.createElement('nav')
