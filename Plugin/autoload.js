@@ -11,6 +11,7 @@ document.body.onload = function(){
 
 export const build = () => {
   const header = document.getElementsByTagName('header') 
+  console.log(header)
   const nav = document.createElement('nav')
   const title = document.createElement('h1')
   title.appendChild(document.createTextNode('Hello Banana'))
