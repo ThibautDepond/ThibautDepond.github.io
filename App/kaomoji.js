@@ -1,0 +1,16 @@
+export default {
+	hoI:'(^０^)ノ',
+    doubleThrow:'┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻',
+    coucou:'(๑･̑◡･̑๑)',
+    hein:'ಠ _ ಠ',
+    hehe:'◕ ◡ ◕',
+    shrug:'¯\\\_(ツ)_/¯',
+    upset:'ಠ ∩ ಠ',
+    destroyed:'ಥ╭╮ಥ',
+    putTheTableDown:'┬─┬ノ( º _ ºノ)',
+    throw:'(╯°□°)╯︵ ┻━┻',
+    sleepy:'(∪｡∪)｡｡｡zzZ',
+    depressed:'（◞‸◟）',
+    hidden:'┬┴┬┴┤ω･)',
+    mFinger:'(-_-)╭∩╮',
+}
