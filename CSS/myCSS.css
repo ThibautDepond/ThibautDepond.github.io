@@ -1,12 +1,13 @@
 :root {
     --primary-color: #64A662;
     --secondary-color: #3FFF38;
-    --tertiary-color: #22E61C;
+    --tertiary: #22E61C;
 
     --complementary-primary-color: #990054;
     --complementary-secondary-color: #E61C8A;
 
     --background-color: #fafffa;
+    --background-color-darken:  #e3e5e3;
 }
 
 
@@ -52,6 +53,7 @@ a {
     flex-direction: row;
     justify-content: space-evenly;
     width: 80%;
+    align-items: self-end;
 }
 .nava a{
     color: black;
@@ -61,15 +63,10 @@ a {
 }
 .nava a:hover{
     background-color: white;
-    border-radius: 1rem 1rem 0 0;
+    border-top-left-radius: 0.8em 1em;
+    border-top-right-radius: 0.8em 1em;
     border-bottom: 5px solid var(--secondary-color);
     border-top: 5px solid var(--primary-color);
-}
-
-.hosted{
-    margin: 0;
-    size: 1rem;
-    align-self: flex-end;
 }
 
 article{
@@ -84,88 +81,36 @@ article section{
     margin-right: 50px;
 }
 
-.arti{
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: auto;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 1%;
-    margin-bottom: 10px;
-}
-.arti p{
-    margin-bottom: 0;
-    margin-top: 0;
-}
-.arti h5{
-    margin-bottom: 0;
-    margin-top: 0;
-    align-self: flex-end;
-}
-
-.app {
+#app {
     width: 80%;
-    margin: 0 auto;
+    margin: 5%;
 }
 
-.app > h1 {
+#app > h1 {
     color: black;
     font-size: 2em;
 }
 
-@media(max-width: 800px) {
-    .app {
-        width: 90%;
-    }
+.copy-btn {
+    width: 2rem;
+    background-color: var(--background-color-darken);
+    border: 1px solid lightgrey;
+    border-radius: 12px;
+    transition: 0.3s;
 }
-
-.app .search-container .btn,
-.app .search-container input {
-    padding: 6px 12px;
-    border: 1px solid #ccc;
+.copy-btn:hover {
+    border: 1px solid black;
 }
-.app .search-container .btn {
-    background: #4aa0fb;
-    color: #fff;
+.copy-btn img {
+    width: 1rem;
 }
-.app .results > ul {
-    list-style: none none;
+.copy-placeholder {
+    margin-top: 5px;
+    padding: 5px;
+    width: 25%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0 0 150px 0;
-    padding: 0;
-}
-.app .results > ul > li {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 20vw;
-    height: 20vw;
-    max-width: 170px;
-    max-height: 170px;
-    min-width: 100px;
-    min-height: 100px;;
-    padding: 10px;
-    margin: 10px 10px 10px 0;
-    box-shadow: 0 2px 2px #ccc;
-    border: 1px solid #ccc;
-}
-.app .results > ul > li > h1 {
-    margin: 0 0 10px 0;
-    font-size: 1.4em;
-    text-transform: uppercase;
-    background-color: white;
-}
-.app p.no-result {
-    display: none;
-}
-.player {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    justify-content: space-between;
+    background-color: var(--background-color-darken);
+    border-radius: 12px;
 }
