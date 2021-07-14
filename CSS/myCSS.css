@@ -114,3 +114,39 @@ article section{
     background-color: var(--background-color-darken);
     border-radius: 12px;
 }
+
+.fade{
+    animation: fade 0.3s linear;
+}
+
+@keyframes fade {
+  from { opacity: 1 }
+  to { opacity: 0 }
+}
+
+.toast{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 250px;
+    visibility: hidden;
+    border-radius: 1vh;
+    transition: opacity 0.3s;
+    margin-top: 10px;
+    box-shadow: 0 0 2px 1px var(--complementary-secondary-color);
+}
+.toasted{
+    background-color: var(--background-color-darken);
+    visibility: visible;
+}
+
+#toaster{
+    position: absolute;
+    right: 0px;
+    top: 10vh;
+    width: 300px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}

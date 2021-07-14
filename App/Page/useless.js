@@ -1,9 +1,12 @@
 import k from '../kaomoji.js'
-import { copyToClipboard } from '../utils.js'
+import { copyToClipboard, toast } from '../utils.js'
 
 export const buildUseless = () => {
 	const main = new DocumentFragment()
 	const copyPasteMe = document.createElement('section')
+	const copyPasteMeH1 = document.createElement('h1')
+	copyPasteMeH1.innerHTML='Copy Paste ME !'
+	copyPasteMe.appendChild(copyPasteMeH1)
 	for (let kaomoji in k) {
 		const placeholder = document.createElement('div')
 		placeholder.classList.add('copy-placeholder')
@@ -15,7 +18,7 @@ export const buildUseless = () => {
 		const copyBtn = document.createElement('button')
 		copyBtn.appendChild(img)
 		copyBtn.classList.add('copy-btn')
-		copyBtn.onclick = () => copyToClipboard(kaomoji)
+		copyBtn.onclick = () => { copyToClipboard(kaomoji) ; toast('copied to clipboard !') }
 		placeholder.appendChild(entry)
 		placeholder.appendChild(copyBtn)
 		copyPasteMe.appendChild(placeholder)
