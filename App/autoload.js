@@ -3,7 +3,7 @@ import * as page from './Page/index.js'
 import * as utils from './utils.js'
 
 document.body.onload = function(){
-  document.getElementById('head').appendChild(cpnt.buildHeader())
+  document.getElementById('sidebar').appendChild(cpnt.buildSideBar())
 
   const app = document.getElementById('app')
   

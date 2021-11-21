@@ -1,2 +1,2 @@
-export { buildHeader } from './header.js'
+export { buildSideBar } from './sidebar.js'
 
