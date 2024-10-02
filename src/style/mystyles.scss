@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+// @import "../node_modules/bulma/sass/base/_index.scss";
+// @import "../node_modules/bulma/sass/themes/_index.scss";
+// @import "../node_modules/bulma/sass/utilities/_index.scss";
+
+// @import "../node_modules/bulma/sass/helpers/_index.scss";
+
+// @import "../node_modules/bulma/sass/components/card.scss";
+// @import "../node_modules/bulma/sass/components/navbar.scss";
+
+// @import "../node_modules/bulma/sass/elements/box.scss";
+// @import "../node_modules/bulma/sass/elements/content.scss";
+
+// @import "../node_modules/bulma/sass/layout/container.scss";
+
+@import "../../node_modules/bulma/sass/_index.scss";
+
+:root {
+    --color-github: #25292e
+    --color-github-text: #F0F6FC
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bulma-body-background-color: #2d3c29;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bulma-body-background-color: #a5df7a;
+    }
+}
+
+.is-github {
+    background-color: var(--color-github) !important;
+    color: var(--color-github-text) !important;
+}
+
+.h-min {
+    height: min-content;
+}

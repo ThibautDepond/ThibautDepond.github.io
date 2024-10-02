@@ -1,0 +1,8 @@
+{
+    "link": [
+        {"name": "Acceuil", "link": "#!/", "external": false},
+        {"name": "Projets", "link": "#!/projects", "external": false},
+        {"name": "CV", "link": "#!/cv", "external": false},
+        {"name": "Linkedin", "link": "https://www.linkedin.com/in/thibaut-depond/", "external": true}
+    ]
+}

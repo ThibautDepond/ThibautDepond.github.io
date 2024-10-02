@@ -1,0 +1,97 @@
+{
+    "cv": {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Thibaut Dépond",
+        "jobTitle": "Développeur Web Polyvalent",
+        "email": "thdep5@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dumbéa",
+            "postalCode": "98835",
+            "addressCountry": "NC"
+        },
+        "knowsLanguage": ["Français", "Anglais"],
+        "hasOccupation": [
+            {
+                "@type": "Role",
+                "roleName": "Développeur Informatique",
+                "hasOccupation": {
+                	"@type": "Occupation",
+                	"responsibilities": [
+                    	"Développement, dans le cadre d’une équipe agile, d’une application web Low-Code Frontend et Backend (VueJS Typescript / Golang)",
+                    	"Déploiement sous Docker",
+                      	"Automatisation des processus de développement",
+                      	"Approvisionnement d’utilisateur via l’implémentation de SCIM (rfc7644)"
+                  	]
+                },
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Smart Global Governance"
+                },
+                "startDate": "2021-10",
+                "endDate": "2023-07"
+            },
+            {
+                "@type": "Role",
+                "roleName": "Stagiaire IT développeur",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Smart Global Governance"
+                },
+                "hasOccupation": {
+                	"@type": "Occupation",
+                	"responsibilities": [
+                    	"Développement, dans le cadre d’une équipe agile, d’une application web Low-Code (VueJS, Typescript)",
+                    	"Implémentation de Blockly dans le but de créé des règle JsonLogic pour étendre le possibilité de traitement de la données",
+                    	"Mise en place du processus de packaging et de déploiement de l’application"
+                	]
+                },
+                "startDate": "2021-03",
+                "endDate": "2021-09"
+            },
+            {
+                "@type": "Role",
+                "roleName": "Stagiare",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Université de la Nouvelle-Calédonie",
+                    "department": {
+                        "@type": "Organization",
+                        "name": "Direction du Numérique et des Systèmes d’Information"
+                    }
+                },
+                "hasOccupation": {
+                	"@type": "Occupation",
+                	"responsibilities": [
+                    	"Développement de la supervision des réseaux et des systèmes informatiques de l’UNC avec le logiciel Centreon"
+                	]
+                },
+                "startDate": "2018-11",
+                "endDate": "2018-12"
+            }
+        ],
+        "hasCredential": [
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Master Informatique",
+                "credentialCategory": "diplome",
+                "recognizedBy": {
+                    "@type": "EducationalOrganization",
+                    "legalName": "École Polytech Nice - Université Côte d’Azur"
+                },
+                "temporal": "2019/2021"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Licence Informatique",
+                "credentialCategory": "diplome",
+                "recognizedBy": {
+                    "@type": "EducationalOrganization",
+                    "legalName": "Université de la Nouvelle-Calédonie "
+                },
+                "temporal": "2017/2019"
+            }
+        ]
+    }
+}

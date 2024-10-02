@@ -1,0 +1,41 @@
+{
+    "home": [
+        {
+            "ID": "00",
+            "date": "01/01/1970",
+            "content": [
+                {"tag": "h1", "text": "En construction"},
+                {"tag": "p", "text": "In dolor elit excepteur non consequat magna in irure in culpa proident. Qui nulla aliqua incididunt labore veniam. Tempor proident ullamco eiusmod quis elit aliquip irure duis. Labore magna amet irure incididunt qui nostrud cupidatat dolor fugiat dolore incididunt labore dolore. Dolore deserunt consectetur aliquip enim consectetur laboris. Est in enim do occaecat."},
+                {"tag": "p", "text": "Eu qui voluptate consectetur excepteur dolor."},
+                {"tag": "a", "text": "https://www.linkedin.com"}
+            ]
+        },
+        {
+            "ID": "01",
+            "date": "02/01/1970",
+            "content": [
+                {"tag": "h1", "text": "Ou êtes vous ?"},
+                {"tag": "p", "text": "En enfer."},
+                {"tag": "p", "text": "Oui c'est pas beau, j'y travail."}
+            ]
+        }
+        
+    ],
+    "projects": [
+        {
+            "name": "BaB",
+            "description": "Voici BaB, Inspiré des la reprrésentation biblique des Anges voici la représention de la sainte Banane.",
+            "tool": ["Blender"]
+        },
+        {
+            "name": "Une étrange cassette",
+            "description": "Une simple pochette d'albums pour 'The Most Mysterious Song Of The Internet'",
+            "tool": ["Blender", "Krita"]
+        },
+        {
+            "name": "Tasmedosep",
+            "description": "Encours",
+            "Language": ["Golang"]
+        }
+    ]
+}

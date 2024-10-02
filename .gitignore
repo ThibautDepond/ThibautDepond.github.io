@@ -1,0 +1,20 @@
+/.vscode
+
+/node_modules
+
+# file: ~/.gitignore_global
+.DS_Store
+.idea
+
+# Sublie Text
+*.sublime-project
+*.sublime-workspace
+
+# yarn
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
