@@ -1,5 +1,7 @@
-export const JTM = (jsonContent) => {
+export const JTM = (jsonContent, pageName) => {
     let nodes = []
+    // sort article by date
+    jsonContent.sort((a, b) => new Date(b.date) - new Date(a.date))
     for (const article of jsonContent) {
         let childs = []
         for (const element of article.content) {
@@ -7,7 +9,8 @@ export const JTM = (jsonContent) => {
                 // TODO do something for arrays
                 continue
             }
-            let tmpChildNode = m(element.tag, element.text)
+            const TKey = pageName + "." + article.ID + "." + element.text
+            let tmpChildNode = m(element.tag, $t(TKey))
             childs.push(tmpChildNode)
         }
         childs.push(m(".is-pulled-right.has-text-grey", article.date)) //TODO I18n compatible

@@ -1,6 +1,8 @@
 /.vscode
 
 /node_modules
+/dist
+/public
 
 # file: ~/.gitignore_global
 .DS_Store

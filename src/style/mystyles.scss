@@ -1,19 +1,6 @@
 @charset "utf-8";
 
-// @import "../node_modules/bulma/sass/base/_index.scss";
-// @import "../node_modules/bulma/sass/themes/_index.scss";
-// @import "../node_modules/bulma/sass/utilities/_index.scss";
-
-// @import "../node_modules/bulma/sass/helpers/_index.scss";
-
-// @import "../node_modules/bulma/sass/components/card.scss";
-// @import "../node_modules/bulma/sass/components/navbar.scss";
-
-// @import "../node_modules/bulma/sass/elements/box.scss";
-// @import "../node_modules/bulma/sass/elements/content.scss";
-
-// @import "../node_modules/bulma/sass/layout/container.scss";
-
+// TODO import only used scss from bulma
 @import "../../node_modules/bulma/sass/_index.scss";
 
 :root {

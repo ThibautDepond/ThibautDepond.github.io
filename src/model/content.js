@@ -4,7 +4,7 @@ import { JTM } from "../lib"
 export const dataLoader = (pageName) => {
     let pageContent = content[pageName] || null
     let mithriled = []
-    for (const ms of JTM(pageContent)) {
+    for (const ms of JTM(pageContent, pageName)) {
         mithriled.push(ms)
         mithriled.push(m(".is-flex.is-justify-content-center", "- <br/> -"))
     }
