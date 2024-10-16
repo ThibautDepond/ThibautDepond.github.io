@@ -12,10 +12,25 @@ export const cv = {
         }
     },
     view: () => {
+        const cvModule = model.getCVModuleFromRdf()
         return m("div",[
             m(cpt.navbar),
             m("main.container", [
-                m(".box", Key.CV),
+                m(cpt.card,
+                    Key.CV,
+                    m(".columns", [
+                        m(".column.is-two-fifths", [
+                            cvModule.details,
+                            m("hr"),
+                            cvModule.courses
+                        ]),
+                        m(".column", [
+                            cvModule.person,
+                            m("br"),
+                            cvModule.professionalExperience
+                        ])
+                    ]),
+                ),
             ]) 
         ])
     },
