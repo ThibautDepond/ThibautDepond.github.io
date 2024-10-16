@@ -13,6 +13,7 @@
 *.sublime-workspace
 
 # yarn
+yarn.lock
 .yarn/*
 !.yarn/cache
 !.yarn/patches
