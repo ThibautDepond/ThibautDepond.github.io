@@ -3,15 +3,77 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Thibaut Dépond",
+        "@id": "thdep5",
         "jobTitle": "Développeur Web Polyvalent",
-        "email": "thdep5@gmail.com",
+        "contactPoints": [
+            {
+                "@type": "ContactPoint",
+                "telephone": "+33 XXXXXXXXXX",
+                "contactType": "FR phone"
+            },
+            {
+                "@type": "ContactPoint",
+                "email": "thdep5@gmail",
+                "contactType": "Professional email"
+            },  
+            {
+                "@type": "ContactPoint",
+                "telephone": "+687 XXXXXX",
+                "contactType": "NC phone"
+            }
+        ],
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Dumbéa",
             "postalCode": "98835",
             "addressCountry": "NC"
         },
-        "knowsLanguage": ["Français", "Anglais"],
+        "knowsLanguage": [
+            {
+                "@type": "Language",
+                "name": "Français",
+                "alternateName": "fr"
+            },
+            {
+                "@type": "Language",
+                "@id": "language/en",
+                "name": "Anglais",
+                "alternateName": "en"
+            }            
+        ],
+        "knowsAbout": [
+            {
+                "@type": "ComputerLanguage",
+                "name": "Golang",
+                "alternateName": "Go"
+            },
+            {
+                "@type": "ComputerLanguage",
+                "name": "Javascript",
+                "alternateName": "JS"
+            },
+            {
+                "@type": "ComputerLanguage",
+                "name": "Typescript",
+                "alternateName": "TS"
+            },
+            {
+                "@type": "ComputerLanguage",
+                "name": "NodeJS"
+            },
+            {
+                "@type": "ComputerLanguage",
+                "name": "HTML"
+            },
+            {
+                "@type": "ComputerLanguage",
+                "name": "CSS"
+            },
+            {
+                "@type": "ComputerLanguage",
+                "name": "VueJS"
+            }
+        ],
         "hasOccupation": [
             {
                 "@type": "Role",
@@ -27,6 +89,7 @@
                 },
                 "worksFor": {
                     "@type": "Organization",
+                    "@id":"organization/SGG",
                     "name": "Smart Global Governance"
                 },
                 "startDate": "2021-10",
@@ -36,8 +99,7 @@
                 "@type": "Role",
                 "roleName": "Stagiaire IT développeur",
                 "worksFor": {
-                    "@type": "Organization",
-                    "name": "Smart Global Governance"
+                    "@id":"organization/SGG"
                 },
                 "hasOccupation": {
                 	"@type": "Occupation",
@@ -71,6 +133,30 @@
                 "endDate": "2018-12"
             }
         ],
+        "hasCertification": [
+            {
+                "@type": "Certification",
+                "name": "EF SET english Certificate",
+                "about": {
+                    "@id": "language/en"
+                },
+                "hasMeasurement": {
+                    "@type": "QuantitativeValue",
+                    "value": 75,
+                    "maxValue": 100,
+                    "minValue": 0
+                },
+                "certificationRating": "C2",
+                "issuedBy": {
+                    "@type": "Organization",
+                    "name": "EF SET"
+
+                },
+                "url": "https://cert.efset.org/dnnAc3",
+                "datePublished": "2024-06-10"
+            
+            }
+        ],
         "hasCredential": [
             {
                 "@type": "EducationalOccupationalCredential",
@@ -91,6 +177,17 @@
                     "legalName": "Université de la Nouvelle-Calédonie "
                 },
                 "temporal": "2017/2019"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Permis de conduire (B)",
+                "credentialCategory": "droit administratif",
+                "recognizedBy": {
+                    "@type": "Organization",
+                    "legalName": "Direction des Infrastructures de la Topographie, des Transports Terrestres",
+                    "alternateName": "DITT"
+                },
+                "datePublished": "2017-12-04"
             }
         ]
     }
