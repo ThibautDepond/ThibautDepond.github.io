@@ -5,5 +5,13 @@
   "home.00.a01": "https://www.linkedin.com",
   "home.01.title": "Where are you ?",
   "home.01.p01": "In Hell.",
-  "home.01.p02": "Yeah it's not pretty, I'm working on it."
+  "home.01.p02": "Yeah it's not pretty, I'm working on it.",
+  "home.02.title": "Finally, colors !",
+  "home.02.p01": "Added a color palette with a dark/light mode",
+  "projects.00.name": "BaB",
+  "projects.00.description": "Inspired by the biblical representation of Angels, Let yourself be engulfed by the beauty, the grace and the omnipotence of the Holy Banana, BaB.",
+  "projects.01.name": "A strange cassette",
+  "projects.01.description": "A simple cover art for 'The Most Mysterious Song Of The Internet'",
+  "projects.02.name": "Tasmedosep",
+  "projects.02.description": "WIP"
 }
