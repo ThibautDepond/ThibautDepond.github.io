@@ -10,6 +10,24 @@
             "title": "Ou êtes vous ?",
             "p01": "En enfer.",
             "p02": "Oui c'est pas beau, j'y travail."
+        },
+        "02": {
+            "title": "Enfin de la couleur !",
+            "p01": "Ajout d'une palette de couleur avec un mode sombre et claire"
+        }
+    },
+    "projects": {
+        "00": {
+            "name": "BaB",
+            "description": "Inspiré des la représentation biblique des Anges, Laissez vous engloutir par la beauté, la grace et l'omnipotence de la sainte Banane, BaB."
+        },
+        "01": {
+            "name": "Une étrange cassette",
+            "description": "Une simple pochette d'albums pour 'The Most Mysterious Song Of The Internet'"
+        },
+        "02": {
+            "name": "Tasmedosep",
+            "description": "En cours"
         }
     }
 }

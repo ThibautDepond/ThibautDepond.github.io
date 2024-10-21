@@ -10,6 +10,24 @@
             "title": "Where are you ?",
             "p01": "In Hell.",
             "p02": "Yeah it's not pretty, I'm working on it."
+        },
+        "02": {
+            "title": "Finally, colors !",
+            "p01": "Added a color palette with a dark/light mode"
+        }
+    },
+    "projects": {
+        "00": {
+            "name": "BaB",
+            "description": "Inspired by the biblical representation of Angels, Let yourself be engulfed by the beauty, the grace and the omnipotence of the Holy Banana, BaB."
+        },
+        "01": {
+            "name": "A strange cassette",
+            "description": "A simple cover art for 'The Most Mysterious Song Of The Internet'"
+        },
+        "02": {
+            "name": "Tasmedosep",
+            "description": "WIP"
         }
     }
 }

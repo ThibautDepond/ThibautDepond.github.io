@@ -1,28 +1,61 @@
 @charset "utf-8";
 
-// TODO import only used scss from bulma
-@import "../../node_modules/bulma/sass/_index.scss";
+// Bulma primary colors
+$text     :	hsl(64, 19%, 30%);
+$link     :	hsl(195, 100%, 17%);
+$primary  : hsl(287, 68%, 27%);
+$info     :	hsl(43, 100%, 51%);
+$success  : hsl(122, 62%, 21%);
+$warning  : hsl(22, 96%, 38%);
+$danger   : hsl(354, 89%, 36%);
+
+// utilities need to be imported first to compute the palette based on primary colors
+@import "../../node_modules/bulma/sass/utilities/_index.scss";
+
+@import "../../node_modules/bulma/sass/themes/_index.scss";
+
+@import "../../node_modules/bulma/sass/base/_index.scss";
+
+@import "../../node_modules/bulma/sass/elements/box.scss";
+@import "../../node_modules/bulma/sass/elements/button.scss";
+@import "../../node_modules/bulma/sass/elements/content.scss";
+@import "../../node_modules/bulma/sass/elements/image.scss";
+@import "../../node_modules/bulma/sass/elements/title.scss";
+
+@import "../../node_modules/bulma/sass/components/navbar.scss";
+@import "../../node_modules/bulma/sass/components/card.scss";
+
+@import "../../node_modules/bulma/sass/grid/columns.scss";
+
+@import "../../node_modules/bulma/sass/layout/container.scss";
+
+@import "../../node_modules/bulma/sass/helpers/_index.scss";
 
 :root {
-    --color-github: #25292e
-    --color-github-text: #F0F6FC
+    --color-github: hsl(213, 11%, 16%);
+    --color-github-text: hsl(210, 67%, 96%);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bulma-body-background-color: #2d3c29;
+        --bulma-body-background-color: hsl(107, 15%, 25%);
+        --bulma-scheme-main: hsl(0, 0%, 15%);
+    }
+    .is-github {
+        background-color: var(--color-github-text) !important;
+        color: var(--color-github) !important;
     }
 }
 
 @media (prefers-color-scheme: light) {
     :root {
-        --bulma-body-background-color: #a5df7a;
+        --bulma-body-background-color: hsl(94, 50%, 80%);
+        --bulma-scheme-main: hsl(54, 80%, 98%);
     }
-}
-
-.is-github {
-    background-color: var(--color-github) !important;
-    color: var(--color-github-text) !important;
+    .is-github {
+        background-color: var(--color-github) !important;
+        color: var(--color-github-text) !important;
+    }
 }
 
 .h-min {

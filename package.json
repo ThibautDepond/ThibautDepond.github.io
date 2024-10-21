@@ -4,10 +4,11 @@
   "license": "MIT",
   "version": "0.1.0",
   "scripts": {
-    "gen:lang": "node ./.scripts/genLang.js",
-    "deploy": "gh-pages -d dist",
     "serve": "webpack serve --mode=development",
-    "build": "webpack --mode=production"
+    "gen:lang": "node ./.scripts/genLang.js",
+    "prebuild": "node ./.scripts/preBuild.js && yarn gen:lang",
+    "build": "webpack --mode=production",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "mithril": "^2.2.2"

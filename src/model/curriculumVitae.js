@@ -10,24 +10,25 @@ const extractPerson = () => {
     ])
 }
 
+const extractLanguages = () => {
+}
+
+const extractComplementaryInfo = () => {
+}
+
 const extractDetails = () => {
     return m("div", [
         m(".title.is-5", "Details"),
-        m("a", {
-            href: cvData.email,
-            target: "_blank",
-            rel: "noreferrer"
-        }, cvData.email),
         m("p", `${cvData.address.addressLocality} - ${cvData.address.postalCode} - ${cvData.address.addressCountry}`),
     ])
 }
 
 const extractProfessionalExperience = () => {
     let Occupations = cvData.hasOccupation.map((occupation) => {
-        return m("div", [
+        return m(".content", [
             m(".columns", [
                 m(".column", [
-                    m("p.title.is-4", occupation.roleName),
+                    m("p.title.is-4.", occupation.roleName),
                     m(".subtitle.is-4", `${occupation.worksFor.name}`)
                 ]),
                 m(".column.is-one-quarter", [
@@ -48,7 +49,10 @@ const extractProfessionalExperience = () => {
 }
 
 const extractCourses = () => {
-    let Credentials = cvData.hasCredential.map((credential) => {
+    let Credentials = cvData.hasCredential.filter((credential) => {
+        return credential.credentialCategory === "diplome"
+    })
+    Credentials = Credentials.map((credential) => {
         return m("div", [
             m("p.title.is-6", credential.name),
             m("p.subtitle.is-6", credential.temporal),

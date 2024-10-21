@@ -2,7 +2,7 @@
     "home": [
         {
             "ID": "00",
-            "date": "01/01/1970",
+            "date": "1970-01-01",
             "content": [
                 {"tag": "h1", "text": "title"},
                 {"tag": "p", "text": "p01"},
@@ -12,32 +12,39 @@
         },
         {
             "ID": "01",
-            "date": "02/01/1970",
+            "date": "1970-01-02",
             "content": [
                 {"tag": "h1", "text": "title"},
                 {"tag": "p", "text": "p01"},
                 {"tag": "p", "text": "p02"}
             ]
-        }
-        
+        },
+        {
+            "ID": "02",
+            "date": "2024-10-21",
+            "content": [
+                {"tag": "h1", "text": "title"},
+                {"tag": "p", "text": "p01"}
+            ]
+        }        
     ],
     "projects": [
         {
             "ID": "00",
-            "name": "BaB",
-            "description": "Voici BaB, Inspiré des la reprrésentation biblique des Anges voici la représention de la sainte Banane.",
+            "name": "name",
+            "description": "description",
             "tool": ["Blender"]
         },
         {   
             "ID": "01",
-            "name": "Une étrange cassette",
-            "description": "Une simple pochette d'albums pour 'The Most Mysterious Song Of The Internet'",
+            "name": "name",
+            "description": "description",
             "tool": ["Blender", "Krita"]
         },
         {
             "ID": "02",
-            "name": "Tasmedosep",
-            "description": "Encours",
+            "name": "name",
+            "description": "description",
             "Language": ["Golang"]
         }
     ]
