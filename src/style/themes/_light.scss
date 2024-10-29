@@ -1,0 +1,23 @@
+@use "sass:map";
+@use 'sass:color';
+
+$colors: (
+    text      :	hsl(64, 19%, 12%),
+    link      :	hsl(195, 100%, 17%),
+    primary   : hsl(287, 68%, 57%),
+    info      :	hsl(43, 100%, 71%),
+    success   : hsl(122, 62%, 41%),
+    warning   : hsl(22, 96%, 58%),
+    danger    : hsl(354, 89%, 56%),
+);
+$fixed-colors:(
+    background: hsl(94, 50%, 80%),
+    scheme-bg : hsl(54, 80%, 98%),
+    github-bg : hsl(213, 11%, 16%),
+    github-fg : hsl(210, 67%, 96%),
+);
+
+@mixin specific {
+    --title-fg: #{color.scale(map.get($colors, "text"), $lightness: 10%, $space: hsl)};
+    --subtitle-fg: #{color.scale(map.get($colors, "text"), $lightness: 20%, $space: hsl)};
+}

@@ -1,0 +1,7 @@
+@mixin system-theme($name) {
+    @media (prefers-color-scheme: #{$name}) {
+      :root {
+        @content;
+      }
+    }
+}

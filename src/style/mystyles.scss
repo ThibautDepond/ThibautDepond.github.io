@@ -1,63 +1,84 @@
 @charset "utf-8";
+@use "helpers";
+@use "themes/theme";
+@use "components";
+@use "layout";
 
-// Bulma primary colors
-$text     :	hsl(64, 19%, 30%);
-$link     :	hsl(195, 100%, 17%);
-$primary  : hsl(287, 68%, 27%);
-$info     :	hsl(43, 100%, 51%);
-$success  : hsl(122, 62%, 21%);
-$warning  : hsl(22, 96%, 38%);
-$danger   : hsl(354, 89%, 36%);
+/* #region miscallaneous */
 
-// utilities need to be imported first to compute the palette based on primary colors
-@import "../../node_modules/bulma/sass/utilities/_index.scss";
-
-@import "../../node_modules/bulma/sass/themes/_index.scss";
-
-@import "../../node_modules/bulma/sass/base/_index.scss";
-
-@import "../../node_modules/bulma/sass/elements/box.scss";
-@import "../../node_modules/bulma/sass/elements/button.scss";
-@import "../../node_modules/bulma/sass/elements/content.scss";
-@import "../../node_modules/bulma/sass/elements/image.scss";
-@import "../../node_modules/bulma/sass/elements/title.scss";
-
-@import "../../node_modules/bulma/sass/components/navbar.scss";
-@import "../../node_modules/bulma/sass/components/card.scss";
-
-@import "../../node_modules/bulma/sass/grid/columns.scss";
-
-@import "../../node_modules/bulma/sass/layout/container.scss";
-
-@import "../../node_modules/bulma/sass/helpers/_index.scss";
-
-:root {
-    --color-github: hsl(213, 11%, 16%);
-    --color-github-text: hsl(210, 67%, 96%);
+body {
+    font-family: "Segoe UI", system-ui, sans-serif !important;
+    margin: 0;
+    background-color: var(--body-bg); 
+    color: var(--body-fg); 
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bulma-body-background-color: hsl(107, 15%, 25%);
-        --bulma-scheme-main: hsl(0, 0%, 15%);
-    }
-    .is-github {
-        background-color: var(--color-github-text) !important;
-        color: var(--color-github) !important;
-    }
+.group{
+    display: flex;
+    align-items: center;
+
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --bulma-body-background-color: hsl(94, 50%, 80%);
-        --bulma-scheme-main: hsl(54, 80%, 98%);
+hr {
+    border: none;
+    border-top: 2px solid var(--body-bg);
+    border-bottom: 2px solid var(--body-bg);
+    color: var(--body-bg);
+    overflow: visible;
+    text-align: center;
+    height: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-fg); 
+}
+.external {
+    cursor: alias !important;
+}
+
+
+figure {
+    img {
+        height: auto;
+        max-width: 100%;
     }
-    .is-github {
-        background-color: var(--color-github) !important;
-        color: var(--color-github-text) !important;
+    .rounded {
+        border-radius: 100%;
     }
 }
 
-.h-min {
-    height: min-content;
+.title {
+  font-weight: 900;
+  color: var(--title-fg);
 }
+
+.subtitle {
+  font-weight: 600;
+  color: var(--subtitle-fg);
+}
+
+.is-github {
+    color: var(--github-fg) !important;
+    background-color: var(--github-bg) !important;
+}
+
+.x64 {
+    height: 64px;
+    width: 64px;
+}
+
+.content {
+    h1 {
+        font-weight: 900;
+        color: var(--title-fg);
+    }
+}
+
+.button {
+    padding: .5rem;
+    border-radius: .25rem;
+}
+
+
+/* #endregion */

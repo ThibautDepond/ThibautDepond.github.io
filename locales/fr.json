@@ -14,6 +14,12 @@
         "02": {
             "title": "Enfin de la couleur !",
             "p01": "Ajout d'une palette de couleur avec un mode sombre et claire"
+        },
+        "03": {
+            "title": "Au revoir Bulma! (en quelque sorrte)",
+            "p01": "J'ai décidé d'arrêter d'utiliser Bulma car, à ce jour, il utilise des fonctionnalités Sass obsolètes et mon Webpack ne veut plus démarrer à cause de cela. Bulma est toujours un bon framework CSS, mais pour éviter d'avoir des fonctionnalités obsolètes qui traînent et un fichier CSS lourd à la fin, j'ai décidé de faire le Sass par moi-même.",
+            "p02": "Cependant, j'utilise toujours certains fichiers de Bulma, comme columns et les themes, mais ils ont été complètement réécrits.",
+            "p03": "Bien que l'adaptation du fichier CSS pour répondre à mes besoins ait été fastidieuse, je pense que l'effort en vallais la peine avoir l'occasion d'apprendre le Sass et aussi de réduire de la taille du fichier CSS final."
         }
     },
     "projects": {

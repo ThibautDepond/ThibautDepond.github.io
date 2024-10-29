@@ -18,14 +18,15 @@ export const cv = {
             m("main.container", [
                 m(cpt.card,
                     Key.CV,
-                    m(".columns", [
-                        m(".column.is-two-fifths", [
+                    m(".columns.reverse-on-breakpoint", [
+                        m(".column.is-one-third", [
                             cvModule.details,
-                            m("hr"),
+                            m("hr.my-4"),
                             cvModule.courses
                         ]),
                         m(".column", [
                             cvModule.person,
+                            m("br"),
                             m("br"),
                             cvModule.professionalExperience
                         ])

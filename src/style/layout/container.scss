@@ -1,0 +1,58 @@
+@use "../utilities/mediaSize" as ms;
+
+$container-offset: 2 * ms.$containerGap !default;
+$container-max-width: ms.$fullhd !default;
+
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+
+  &.is-fluid {
+    max-width: none !important;
+    padding-left: ms.$containerGap;
+    padding-right: ms.$containerGap;
+    width: 100%;
+  }
+
+  &.is-max-tablet {
+    max-width: ms.$tablet - $container-offset;
+  }
+
+  @include ms.desktop {
+    max-width: ms.$desktop - $container-offset;
+  }
+
+  @include ms.until-widescreen {
+    &.is-widescreen:not(
+        .is-max-tablet
+      ):not(.is-max-desktop) {
+      max-width: min(ms.$widescreen, $container-max-width) - $container-offset;
+    }
+  }
+
+  @include ms.until-fullhd {
+    &.is-fullhd:not(.is-max-tablet):not(
+        .is-max-desktop
+      ):not(.is-max-widescreen) {
+      max-width: min(ms.$fullhd, $container-max-width) - $container-offset;
+    }
+  }
+
+  @include ms.widescreen {
+    &:not(.is-max-tablet):not(
+        .is-max-desktop
+      ) {
+      max-width: min(ms.$widescreen, $container-max-width) - $container-offset;
+    }
+  }
+
+  @include ms.fullhd {
+    &:not(.is-max-tablet):not(
+        .is-max-desktop
+      ):not(.is-max-widescreen) {
+      max-width: min(ms.$fullhd, $container-max-width) - $container-offset;
+    }
+  }
+}

@@ -8,7 +8,7 @@
         "contactPoints": [
             {
                 "@type": "ContactPoint",
-                "telephone": "+33 XXXXXXXXXX",
+                "telephone": "+33 XX XX XX XX XX",
                 "contactType": "FR phone"
             },
             {
@@ -18,7 +18,7 @@
             },  
             {
                 "@type": "ContactPoint",
-                "telephone": "+687 XXXXXX",
+                "telephone": "+687 XX XX XX",
                 "contactType": "NC phone"
             }
         ],

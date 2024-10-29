@@ -1,0 +1,761 @@
+@use "sass:math";
+@use "../utilities/mediaSize" as ms;
+
+$column-gap: 0.75rem !default;
+$block-spacing: 1.5rem !default;
+
+$thirds: (
+    one: 33.3333%,
+    two: 66.6666%
+);
+
+$quarters: (
+    one: 25%,
+    // two quarters is half
+    three: 75%,
+);
+
+$fifths: (
+    one: 20%,
+    two: 40%,
+    three: 60%,
+    four: 80%,
+);
+
+$others: (
+    narrow: unset,
+    half: 50%,
+    full: 100%,
+);
+
+:root {
+    --column-gap: #{$column-gap};
+    --block-spacing: #{$block-spacing};
+}
+
+@include ms.until( ms.$desktop) {
+  .reverse-on-breakpoint {
+    display : flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: #{$column-gap};
+
+  .columns.is-mobile
+    > &.is-narrow {
+    flex: none;
+    width: unset;
+  }
+
+  .columns.is-mobile
+    > &.is-full {
+    flex: none;
+    width: 100%;
+  }
+  
+  .columns.is-mobile
+    > &.is-half {
+    flex: none;
+    width: 50%;
+  }
+
+  .columns.is-mobile
+    > &.is-three-quarters {
+    flex: none;
+    width: 75%;
+  }
+
+  .columns.is-mobile
+    > &.is-two-thirds {
+    flex: none;
+    width: 66.6666%;
+  }
+
+  
+
+  .columns.is-mobile
+    > &.is-one-third {
+    flex: none;
+    width: 33.3333%;
+  }
+
+  .columns.is-mobile
+    > &.is-one-quarter {
+    flex: none;
+    width: 25%;
+  }
+
+  .columns.is-mobile
+    > &.is-one-fifth {
+    flex: none;
+    width: 20%;
+  }
+
+  .columns.is-mobile
+    > &.is-two-fifths {
+    flex: none;
+    width: 40%;
+  }
+
+  .columns.is-mobile
+    > &.is-three-fifths {
+    flex: none;
+    width: 60%;
+  }
+
+  .columns.is-mobile
+    > &.is-four-fifths {
+    flex: none;
+    width: 80%;
+  }
+
+  .columns.is-mobile
+    > &.is-offset-three-quarters {
+    margin-inline-start: 75%;
+  }
+
+  .columns.is-mobile
+    > &.is-offset-two-thirds {
+    margin-inline-start: 66.6666%;
+  }
+
+  .columns.is-mobile
+    > &.is-offset-half {
+    margin-inline-start: 50%;
+  }
+
+  .columns.is-mobile
+    > &.is-offset-one-third {
+    margin-inline-start: 0.3333%;
+  }
+
+  .columns.is-mobile
+    > &.is-offset-one-quarter {
+    margin-inline-start: 25%;
+  }
+
+  .columns.is-mobile
+    > &.is-offset-one-fifth {
+    margin-inline-start: 20%;
+  }
+
+  .columns.is-mobile
+    > &.is-offset-two-fifths {
+    margin-inline-start: 40%;
+  }
+
+  .columns.is-mobile
+    > &.is-offset-three-fifths {
+    margin-inline-start: 60%;
+  }
+
+  .columns.is-mobile
+    > &.is-offset-four-fifths {
+    margin-inline-start: 80%;
+  }
+
+  @for $i from 0 through 12 {
+    .columns.is-mobile
+      > &.is-#{$i} {
+      flex: none;
+      width: math.percentage(math.div($i, 12));
+    }
+
+    .columns.is-mobile
+      > &.is-offset-#{$i} {
+      margin-inline-start: math.percentage(math.div($i, 12));
+    }
+  }
+
+  @include ms.mobile {
+    @each $key, $ratio in $others {
+        &.is-#{$key}-mobile {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key, $ratio in $thirds {
+        &.is-#{$key}-thirds-mobile {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key, $ratio in $quarters {
+        &.is-#{$key}-quarters-mobile {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key,$ratio in $fifths {
+      &.is-#{$key}-fifths-mobile {
+        flex: none;
+        width: #{$ratio};
+      }
+    }
+
+    &.is-offset-three-quarters-mobile {
+      margin-inline-start: 75%;
+    }
+
+    &.is-offset-two-thirds-mobile {
+      margin-inline-start: 66.6666%;
+    }
+
+    &.is-offset-half-mobile {
+      margin-inline-start: 50%;
+    }
+
+    &.is-offset-one-third-mobile {
+      margin-inline-start: 0.3333%;
+    }
+
+    &.is-offset-one-quarter-mobile {
+      margin-inline-start: 25%;
+    }
+
+    &.is-offset-one-fifth-mobile {
+      margin-inline-start: 20%;
+    }
+
+    &.is-offset-two-fifths-mobile {
+      margin-inline-start: 40%;
+    }
+
+    &.is-offset-three-fifths-mobile {
+      margin-inline-start: 60%;
+    }
+
+    &.is-offset-four-fifths-mobile {
+      margin-inline-start: 80%;
+    }
+
+    @for $i from 0 through 12 {
+      &.is-#{$i}-mobile {
+        flex: none;
+        width: math.percentage(math.div($i, 12));
+      }
+
+      &.is-offset-#{$i}-mobile {
+        margin-inline-start: math.percentage(math.div($i, 12));
+      }
+    }
+  }
+
+  @include ms.tablet {
+    @each $key, $ratio in $others {
+        &.is-#{$key},
+        &.is-#{$key}-tablet {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key, $ratio in $thirds {
+        &.is-#{$key}-thirds,
+        &.is-#{$key}-thirds-tablet {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key, $ratio in $quarters {
+        &.is-#{$key}-quarters,
+        &.is-#{$key}-quarters-tablet {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key,$ratio in $fifths {
+      &.is-#{$key}-fifths,
+      &.is-#{$key}-fifths-tablet {
+        flex: none;
+        width: #{$ratio};
+      }
+    }
+
+    &.is-offset-half,
+    &.is-offset-half-tablet {
+      margin-inline-start: 50%;
+    }
+
+    &.is-offset-one-third,
+    &.is-offset-one-third-tablet {
+      margin-inline-start: 0.3333%;
+    }
+
+    &.is-offset-two-thirds,
+    &.is-offset-two-thirds-tablet {
+      margin-inline-start: 66.6666%;
+    }
+
+    &.is-offset-one-quarter,
+    &.is-offset-one-quarter-tablet {
+      margin-inline-start: 25%;
+    }
+
+    &.is-offset-three-quarters,
+    &.is-offset-three-quarters-tablet {
+      margin-inline-start: 75%;
+    }
+
+    &.is-offset-one-fifth,
+    &.is-offset-one-fifth-tablet {
+      margin-inline-start: 20%;
+    }
+
+    &.is-offset-two-fifths,
+    &.is-offset-two-fifths-tablet {
+      margin-inline-start: 40%;
+    }
+
+    &.is-offset-three-fifths,
+    &.is-offset-three-fifths-tablet {
+      margin-inline-start: 60%;
+    }
+
+    &.is-offset-four-fifths,
+    &.is-offset-four-fifths-tablet {
+      margin-inline-start: 80%;
+    }
+
+    @for $i from 0 through 12 {
+      &.is-#{$i},
+      &.is-#{$i}-tablet {
+        flex: none;
+        width: math.percentage(math.div($i, 12));
+      }
+
+      &.is-offset-#{$i},
+      &.is-offset-#{$i}-tablet {
+        margin-inline-start: math.percentage(math.div($i, 12));
+      }
+    }
+  }
+
+  @include ms.touch {
+    @each $key, $ratio in $others {
+        &.is-#{$key}-touch {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key, $ratio in $thirds {
+        &.is-#{$key}-thirds-touch {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key, $ratio in $quarters {
+        &.is-#{$key}-quarters-touch {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key,$ratio in $fifths {
+      &.is-#{$key}-fifths-touch {
+        flex: none;
+        width: #{$ratio};
+      }
+    }
+
+    &.is-offset-three-quarters-touch {
+      margin-inline-start: 75%;
+    }
+
+    &.is-offset-two-thirds-touch {
+      margin-inline-start: 66.6666%;
+    }
+
+    &.is-offset-half-touch {
+      margin-inline-start: 50%;
+    }
+
+    &.is-offset-one-third-touch {
+      margin-inline-start: 0.3333%;
+    }
+
+    &.is-offset-one-quarter-touch {
+      margin-inline-start: 25%;
+    }
+
+    &.is-offset-one-fifth-touch {
+      margin-inline-start: 20%;
+    }
+
+    &.is-offset-two-fifths-touch {
+      margin-inline-start: 40%;
+    }
+
+    &.is-offset-three-fifths-touch {
+      margin-inline-start: 60%;
+    }
+
+    &.is-offset-four-fifths-touch {
+      margin-inline-start: 80%;
+    }
+
+    @for $i from 0 through 12 {
+      &.is-#{$i}-touch {
+        flex: none;
+        width: math.percentage(math.div($i, 12));
+      }
+
+      &.is-offset-#{$i}-touch {
+        margin-inline-start: math.percentage(math.div($i, 12));
+      }
+    }
+  }
+
+  @include ms.desktop {
+    @each $key, $ratio in $others {
+        &.is-#{$key}-desktop {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key, $ratio in $thirds {
+        &.is-#{$key}-thirds-desktop {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key, $ratio in $quarters {
+        &.is-#{$key}-quarters-desktop {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key,$ratio in $fifths {
+      &.is-#{$key}-fifths-desktop {
+        flex: none;
+        width: #{$ratio};
+      }
+    }
+
+    &.is-offset-three-quarters-desktop {
+      margin-inline-start: 75%;
+    }
+
+    &.is-offset-two-thirds-desktop {
+      margin-inline-start: 66.6666%;
+    }
+
+    &.is-offset-half-desktop {
+      margin-inline-start: 50%;
+    }
+
+    &.is-offset-one-third-desktop {
+      margin-inline-start: 0.3333%;
+    }
+
+    &.is-offset-one-quarter-desktop {
+      margin-inline-start: 25%;
+    }
+
+    &.is-offset-one-fifth-desktop {
+      margin-inline-start: 20%;
+    }
+
+    &.is-offset-two-fifths-desktop {
+      margin-inline-start: 40%;
+    }
+
+    &.is-offset-three-fifths-desktop {
+      margin-inline-start: 60%;
+    }
+
+    &.is-offset-four-fifths-desktop {
+      margin-inline-start: 80%;
+    }
+
+    @for $i from 0 through 12 {
+      &.is-#{$i}-desktop {
+        flex: none;
+        width: math.percentage(math.div($i, 12));
+      }
+
+      &.is-offset-#{$i}-desktop {
+        margin-inline-start: math.percentage(math.div($i, 12));
+      }
+    }
+  }
+
+  @include ms.widescreen {
+    @each $key, $ratio in $others {
+        &.is-#{$key}-widescreen {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key, $ratio in $thirds {
+        &.is-#{$key}-thirds-widescreen {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key, $ratio in $quarters {
+        &.is-#{$key}-quarters-widescreen {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key,$ratio in $fifths {
+      &.is-#{$key}-fifths-widescreen {
+        flex: none;
+        width: #{$ratio};
+      }
+    }
+
+    &.is-offset-three-quarters-widescreen {
+      margin-inline-start: 75%;
+    }
+
+    &.is-offset-two-thirds-widescreen {
+      margin-inline-start: 66.6666%;
+    }
+
+    &.is-offset-half-widescreen {
+      margin-inline-start: 50%;
+    }
+
+    &.is-offset-one-third-widescreen {
+      margin-inline-start: 0.3333%;
+    }
+
+    &.is-offset-one-quarter-widescreen {
+      margin-inline-start: 25%;
+    }
+
+    &.is-offset-one-fifth-widescreen {
+      margin-inline-start: 20%;
+    }
+
+    &.is-offset-two-fifths-widescreen {
+      margin-inline-start: 40%;
+    }
+
+    &.is-offset-three-fifths-widescreen {
+      margin-inline-start: 60%;
+    }
+
+    &.is-offset-four-fifths-widescreen {
+      margin-inline-start: 80%;
+    }
+
+    @for $i from 0 through 12 {
+      &.is-#{$i}-widescreen {
+        flex: none;
+        width: math.percentage(math.div($i, 12));
+      }
+
+      &.is-offset-#{$i}-widescreen {
+        margin-inline-start: math.percentage(math.div($i, 12));
+      }
+    }
+  }
+
+  @include ms.fullhd {
+    @each $key, $ratio in $others {
+        &.is-#{$key}-fullhd {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key, $ratio in $thirds {
+        &.is-#{$key}-thirds-fullhd {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key, $ratio in $quarters {
+        &.is-#{$key}-quarters-fullhd {
+          flex: none;
+          width: #{$ratio};
+        }
+    }
+    @each $key,$ratio in $fifths {
+      &.is-#{$key}-fifths-fullhd {
+        flex: none;
+        width: #{$ratio};
+      }
+    }
+
+    &.is-offset-three-quarters-fullhd {
+      margin-inline-start: 75%;
+    }
+
+    &.is-offset-two-thirds-fullhd {
+      margin-inline-start: 66.6666%;
+    }
+
+    &.is-offset-half-fullhd {
+      margin-inline-start: 50%;
+    }
+
+    &.is-offset-one-third-fullhd {
+      margin-inline-start: 33.3333%;
+    }
+
+    &.is-offset-one-quarter-fullhd {
+      margin-inline-start: 25%;
+    }
+
+    &.is-offset-one-fifth-fullhd {
+      margin-inline-start: 20%;
+    }
+
+    &.is-offset-two-fifths-fullhd {
+      margin-inline-start: 40%;
+    }
+
+    &.is-offset-three-fifths-fullhd {
+      margin-inline-start: 60%;
+    }
+
+    &.is-offset-four-fifths-fullhd {
+      margin-inline-start: 80%;
+    }
+
+    @for $i from 0 through 12 {
+      &.is-#{$i}-fullhd {
+        flex: none;
+        width: math.percentage(math.div($i, 12));
+      }
+
+      &.is-offset-#{$i}-fullhd {
+        margin-inline-start: math.percentage(math.div($i, 12));
+      }
+    }
+  }
+}
+
+.columns {
+  margin-inline-start: calc(-1 * #{$column-gap});
+  margin-inline-end: calc(-1 * #{$column-gap});
+  margin-top: calc(-1 * #{$column-gap});
+
+  &:last-child {
+    margin-bottom: calc(-1 * #{$column-gap});
+  }
+
+  &:not(:last-child) {
+    margin-bottom: calc(
+      #{$block-spacing} - #{$column-gap}
+    );
+  }
+
+  // Modifiers
+  &.is-centered {
+    justify-content: center;
+  }
+
+  &.is-gapless {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+
+    margin-top: 0;
+
+    & > .column {
+      margin: 0;
+      padding: 0 !important;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.is-mobile {
+    display: flex;
+  }
+
+  &.is-multiline {
+    flex-wrap: wrap;
+  }
+
+  &.is-vcentered {
+    align-items: center;
+  }
+
+  // Responsiveness
+  @include ms.tablet {
+    &:not(.is-desktop) {
+      display: flex;
+    }
+  }
+
+  @include ms.desktop {
+    // Modifiers
+    &.is-desktop {
+      display: flex;
+    }
+  }
+
+  @for $i from 0 through 8 {
+    &.is-#{$i} {
+        --column-gap: #{$i * 0.25rem};
+    }
+
+    @include ms.mobile {
+      &.is-#{$i}-mobile {
+        --column-gap: #{$i * 0.25rem};
+      }
+    }
+
+    @include ms.tablet {
+      &.is-#{$i}-tablet {
+        --column-gap: #{$i * 0.25rem};
+      }
+    }
+
+    @include ms.tablet-only {
+      &.is-#{$i}-tablet-only {
+        $--column-gap: #{$i * 0.25rem};
+      }
+    }
+
+    @include ms.touch {
+      &.is-#{$i}-touch {
+        $--column-gap: #{$i * 0.25rem};
+      }
+    }
+
+    @include ms.desktop {
+      &.is-#{$i}-desktop {
+        $--column-gap: #{$i * 0.25rem};
+      }
+    }
+
+    @include ms.desktop-only {
+      &.is-#{$i}-desktop-only {
+        $--column-gap: #{$i * 0.25rem};
+      }
+    }
+
+    @include ms.widescreen {
+      &.is-#{$i}-widescreen {
+        $--column-gap: #{$i * 0.25rem};
+      }
+    }
+
+    @include ms.widescreen-only {
+      &.is-#{$i}-widescreen-only {
+        $--column-gap: #{$i * 0.25rem};
+      }
+    }
+
+    @include ms.fullhd {
+      &.is-#{$i}-fullhd {
+        $--column-gap: #{$i * 0.25rem};
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+$font-size-values: xx-small, x-small, small, medium, large, x-large, xx-large, xxx-large, smaller, larger;
+
+@each $value in $font-size-values {
+    .is-#{$value} {
+        font-size: $value !important;
+    }
+}

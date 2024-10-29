@@ -1,0 +1,7 @@
+$float-values: left, right, inline-start, inline-end;
+
+@each $value in $float-values {
+  .to-#{$value} {
+    float: $value !important;
+  }
+}

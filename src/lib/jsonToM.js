@@ -13,7 +13,7 @@ export const JTM = (jsonContent, pageName) => {
             let tmpChildNode = m(element.tag, $t(TKey))
             childs.push(tmpChildNode)
         }
-        childs.push(m(".is-pulled-right.has-text-grey", article.date)) //TODO I18n compatible
+        childs.push(m(".to-right", article.date)) //TODO I18n compatible
         let tmpNode = m(".content.my-6", childs)
         nodes.push(tmpNode)
     }
