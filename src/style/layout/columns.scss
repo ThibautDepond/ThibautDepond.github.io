@@ -28,6 +28,89 @@ $others: (
     full: 100%,
 );
 
+$devices: mobile, touch, desktop, widescreen, fullhd;
+
+@mixin columnify($media) {
+  @each $key, $ratio in $others {
+          &.is-#{$key}-#{$media} {
+            flex: none;
+            width: #{$ratio};
+          }
+  }
+
+  &.is-offset-half-#{$media} {
+      margin-inline-start: 50%;
+  }
+
+  @each $key, $ratio in $thirds {
+      @if $key == "one" {
+        &.is-#{$key}-third-#{$media} {
+          flex: none;
+          width: #{$ratio};
+        }
+        &.is-offset-one-third-#{$media} {
+          margin-inline-start: 0.3333%;
+        }
+      } @else {
+        &.is-#{$key}-thirds-#{$media} {
+          flex: none;
+          width: #{$ratio};
+        }
+        &.is-offset-#{$key}-thirds-#{$media} {
+          margin-inline-start: #{$ratio};
+        }
+      }
+  }
+  @each $key, $ratio in $quarters {
+        @if $key == "one" {
+          &.is-#{$key}-quarter-#{$media} {
+            flex: none;
+            width: #{$ratio};
+          }
+          &.is-offset-#{$key}-quarter-#{$media} {
+            margin-inline-start: #{$ratio};
+          }
+        } @else {
+          &.is-#{$key}-quarters-#{$media} {
+            flex: none;
+            width: #{$ratio};
+          }
+          &.is-offset-#{$key}-quarters-#{$media} {
+            margin-inline-start: #{$ratio};
+          }
+        }
+  }
+  @each $key, $ratio in $quarters {
+        @if $key == "one" {
+          &.is-#{$key}-fifth-#{$media} {
+            flex: none;
+            width: #{$ratio};
+          }
+          &.is-offset-#{$key}-fifth-#{$media} {
+            margin-inline-start: #{$ratio};
+          }
+        } @else {
+          &.is-#{$key}-fifths-#{$media} {
+            flex: none;
+            width: #{$ratio};
+          }
+          &.is-offset-#{$key}-fifths-#{$media} {
+            margin-inline-start: #{$ratio};
+          }
+        }
+  }
+  @for $i from 0 through 12 {
+        &.is-#{$i}-#{$media} {
+          flex: none;
+          width: math.percentage(math.div($i, 12));
+        }
+
+        &.is-offset-#{$i}-#{$media} {
+          margin-inline-start: math.percentage(math.div($i, 12));
+        }
+  }
+}
+
 :root {
     --column-gap: #{$column-gap};
     --block-spacing: #{$block-spacing};
@@ -173,80 +256,6 @@ $others: (
     }
   }
 
-  @include ms.mobile {
-    @each $key, $ratio in $others {
-        &.is-#{$key}-mobile {
-          flex: none;
-          width: #{$ratio};
-        }
-    }
-    @each $key, $ratio in $thirds {
-        &.is-#{$key}-thirds-mobile {
-          flex: none;
-          width: #{$ratio};
-        }
-    }
-    @each $key, $ratio in $quarters {
-        &.is-#{$key}-quarters-mobile {
-          flex: none;
-          width: #{$ratio};
-        }
-    }
-    @each $key,$ratio in $fifths {
-      &.is-#{$key}-fifths-mobile {
-        flex: none;
-        width: #{$ratio};
-      }
-    }
-
-    &.is-offset-three-quarters-mobile {
-      margin-inline-start: 75%;
-    }
-
-    &.is-offset-two-thirds-mobile {
-      margin-inline-start: 66.6666%;
-    }
-
-    &.is-offset-half-mobile {
-      margin-inline-start: 50%;
-    }
-
-    &.is-offset-one-third-mobile {
-      margin-inline-start: 0.3333%;
-    }
-
-    &.is-offset-one-quarter-mobile {
-      margin-inline-start: 25%;
-    }
-
-    &.is-offset-one-fifth-mobile {
-      margin-inline-start: 20%;
-    }
-
-    &.is-offset-two-fifths-mobile {
-      margin-inline-start: 40%;
-    }
-
-    &.is-offset-three-fifths-mobile {
-      margin-inline-start: 60%;
-    }
-
-    &.is-offset-four-fifths-mobile {
-      margin-inline-start: 80%;
-    }
-
-    @for $i from 0 through 12 {
-      &.is-#{$i}-mobile {
-        flex: none;
-        width: math.percentage(math.div($i, 12));
-      }
-
-      &.is-offset-#{$i}-mobile {
-        margin-inline-start: math.percentage(math.div($i, 12));
-      }
-    }
-  }
-
   @include ms.tablet {
     @each $key, $ratio in $others {
         &.is-#{$key},
@@ -256,24 +265,48 @@ $others: (
         }
     }
     @each $key, $ratio in $thirds {
+      @if $key == "one" {
+        &.is-#{$key}-third,
+        &.is-#{$key}-third-tablet {
+          flex: none;
+          width: #{$ratio};
+        }
+      } @else {
         &.is-#{$key}-thirds,
         &.is-#{$key}-thirds-tablet {
           flex: none;
           width: #{$ratio};
         }
+      }
     }
     @each $key, $ratio in $quarters {
+      @if $key == "one" {
+        &.is-#{$key}-quarter,
+        &.is-#{$key}-quarter-tablet {
+          flex: none;
+          width: #{$ratio};
+        }
+      } @else {
         &.is-#{$key}-quarters,
         &.is-#{$key}-quarters-tablet {
           flex: none;
           width: #{$ratio};
         }
+      }
     }
-    @each $key,$ratio in $fifths {
-      &.is-#{$key}-fifths,
-      &.is-#{$key}-fifths-tablet {
-        flex: none;
-        width: #{$ratio};
+    @each $key, $ratio in $quarters {
+      @if $key == "one" {
+        &.is-#{$key}-fifth,
+        &.is-#{$key}-fifth-tablet {
+          flex: none;
+          width: #{$ratio};
+        }
+      } @else {
+        &.is-#{$key}-fifths,
+        &.is-#{$key}-fifths-tablet {
+          flex: none;
+          width: #{$ratio};
+        }
       }
     }
 
@@ -336,300 +369,20 @@ $others: (
     }
   }
 
+  @include ms.mobile {
+    @include columnify("mobile")
+  }
   @include ms.touch {
-    @each $key, $ratio in $others {
-        &.is-#{$key}-touch {
-          flex: none;
-          width: #{$ratio};
-        }
-    }
-    @each $key, $ratio in $thirds {
-        &.is-#{$key}-thirds-touch {
-          flex: none;
-          width: #{$ratio};
-        }
-    }
-    @each $key, $ratio in $quarters {
-        &.is-#{$key}-quarters-touch {
-          flex: none;
-          width: #{$ratio};
-        }
-    }
-    @each $key,$ratio in $fifths {
-      &.is-#{$key}-fifths-touch {
-        flex: none;
-        width: #{$ratio};
-      }
-    }
-
-    &.is-offset-three-quarters-touch {
-      margin-inline-start: 75%;
-    }
-
-    &.is-offset-two-thirds-touch {
-      margin-inline-start: 66.6666%;
-    }
-
-    &.is-offset-half-touch {
-      margin-inline-start: 50%;
-    }
-
-    &.is-offset-one-third-touch {
-      margin-inline-start: 0.3333%;
-    }
-
-    &.is-offset-one-quarter-touch {
-      margin-inline-start: 25%;
-    }
-
-    &.is-offset-one-fifth-touch {
-      margin-inline-start: 20%;
-    }
-
-    &.is-offset-two-fifths-touch {
-      margin-inline-start: 40%;
-    }
-
-    &.is-offset-three-fifths-touch {
-      margin-inline-start: 60%;
-    }
-
-    &.is-offset-four-fifths-touch {
-      margin-inline-start: 80%;
-    }
-
-    @for $i from 0 through 12 {
-      &.is-#{$i}-touch {
-        flex: none;
-        width: math.percentage(math.div($i, 12));
-      }
-
-      &.is-offset-#{$i}-touch {
-        margin-inline-start: math.percentage(math.div($i, 12));
-      }
-    }
+    @include columnify("touch")
   }
-
   @include ms.desktop {
-    @each $key, $ratio in $others {
-        &.is-#{$key}-desktop {
-          flex: none;
-          width: #{$ratio};
-        }
-    }
-    @each $key, $ratio in $thirds {
-        &.is-#{$key}-thirds-desktop {
-          flex: none;
-          width: #{$ratio};
-        }
-    }
-    @each $key, $ratio in $quarters {
-        &.is-#{$key}-quarters-desktop {
-          flex: none;
-          width: #{$ratio};
-        }
-    }
-    @each $key,$ratio in $fifths {
-      &.is-#{$key}-fifths-desktop {
-        flex: none;
-        width: #{$ratio};
-      }
-    }
-
-    &.is-offset-three-quarters-desktop {
-      margin-inline-start: 75%;
-    }
-
-    &.is-offset-two-thirds-desktop {
-      margin-inline-start: 66.6666%;
-    }
-
-    &.is-offset-half-desktop {
-      margin-inline-start: 50%;
-    }
-
-    &.is-offset-one-third-desktop {
-      margin-inline-start: 0.3333%;
-    }
-
-    &.is-offset-one-quarter-desktop {
-      margin-inline-start: 25%;
-    }
-
-    &.is-offset-one-fifth-desktop {
-      margin-inline-start: 20%;
-    }
-
-    &.is-offset-two-fifths-desktop {
-      margin-inline-start: 40%;
-    }
-
-    &.is-offset-three-fifths-desktop {
-      margin-inline-start: 60%;
-    }
-
-    &.is-offset-four-fifths-desktop {
-      margin-inline-start: 80%;
-    }
-
-    @for $i from 0 through 12 {
-      &.is-#{$i}-desktop {
-        flex: none;
-        width: math.percentage(math.div($i, 12));
-      }
-
-      &.is-offset-#{$i}-desktop {
-        margin-inline-start: math.percentage(math.div($i, 12));
-      }
-    }
+    @include columnify("desktop")
   }
-
   @include ms.widescreen {
-    @each $key, $ratio in $others {
-        &.is-#{$key}-widescreen {
-          flex: none;
-          width: #{$ratio};
-        }
-    }
-    @each $key, $ratio in $thirds {
-        &.is-#{$key}-thirds-widescreen {
-          flex: none;
-          width: #{$ratio};
-        }
-    }
-    @each $key, $ratio in $quarters {
-        &.is-#{$key}-quarters-widescreen {
-          flex: none;
-          width: #{$ratio};
-        }
-    }
-    @each $key,$ratio in $fifths {
-      &.is-#{$key}-fifths-widescreen {
-        flex: none;
-        width: #{$ratio};
-      }
-    }
-
-    &.is-offset-three-quarters-widescreen {
-      margin-inline-start: 75%;
-    }
-
-    &.is-offset-two-thirds-widescreen {
-      margin-inline-start: 66.6666%;
-    }
-
-    &.is-offset-half-widescreen {
-      margin-inline-start: 50%;
-    }
-
-    &.is-offset-one-third-widescreen {
-      margin-inline-start: 0.3333%;
-    }
-
-    &.is-offset-one-quarter-widescreen {
-      margin-inline-start: 25%;
-    }
-
-    &.is-offset-one-fifth-widescreen {
-      margin-inline-start: 20%;
-    }
-
-    &.is-offset-two-fifths-widescreen {
-      margin-inline-start: 40%;
-    }
-
-    &.is-offset-three-fifths-widescreen {
-      margin-inline-start: 60%;
-    }
-
-    &.is-offset-four-fifths-widescreen {
-      margin-inline-start: 80%;
-    }
-
-    @for $i from 0 through 12 {
-      &.is-#{$i}-widescreen {
-        flex: none;
-        width: math.percentage(math.div($i, 12));
-      }
-
-      &.is-offset-#{$i}-widescreen {
-        margin-inline-start: math.percentage(math.div($i, 12));
-      }
-    }
+    @include columnify("widescreen")
   }
-
   @include ms.fullhd {
-    @each $key, $ratio in $others {
-        &.is-#{$key}-fullhd {
-          flex: none;
-          width: #{$ratio};
-        }
-    }
-    @each $key, $ratio in $thirds {
-        &.is-#{$key}-thirds-fullhd {
-          flex: none;
-          width: #{$ratio};
-        }
-    }
-    @each $key, $ratio in $quarters {
-        &.is-#{$key}-quarters-fullhd {
-          flex: none;
-          width: #{$ratio};
-        }
-    }
-    @each $key,$ratio in $fifths {
-      &.is-#{$key}-fifths-fullhd {
-        flex: none;
-        width: #{$ratio};
-      }
-    }
-
-    &.is-offset-three-quarters-fullhd {
-      margin-inline-start: 75%;
-    }
-
-    &.is-offset-two-thirds-fullhd {
-      margin-inline-start: 66.6666%;
-    }
-
-    &.is-offset-half-fullhd {
-      margin-inline-start: 50%;
-    }
-
-    &.is-offset-one-third-fullhd {
-      margin-inline-start: 33.3333%;
-    }
-
-    &.is-offset-one-quarter-fullhd {
-      margin-inline-start: 25%;
-    }
-
-    &.is-offset-one-fifth-fullhd {
-      margin-inline-start: 20%;
-    }
-
-    &.is-offset-two-fifths-fullhd {
-      margin-inline-start: 40%;
-    }
-
-    &.is-offset-three-fifths-fullhd {
-      margin-inline-start: 60%;
-    }
-
-    &.is-offset-four-fifths-fullhd {
-      margin-inline-start: 80%;
-    }
-
-    @for $i from 0 through 12 {
-      &.is-#{$i}-fullhd {
-        flex: none;
-        width: math.percentage(math.div($i, 12));
-      }
-
-      &.is-offset-#{$i}-fullhd {
-        margin-inline-start: math.percentage(math.div($i, 12));
-      }
-    }
+    @include columnify("fullhd")
   }
 }
 
