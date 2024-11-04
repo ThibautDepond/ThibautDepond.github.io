@@ -3,7 +3,12 @@ require('./style/mystyles.scss')
 
 var root = document.body
 
-i18n.loadAndSetLocale(i18n.DEFAULT_LOCALE)
+let navigatorLanguage = i18n.DEFAULT_LOCALE
+if (navigator.language != undefined) {
+    navigatorLanguage = navigator.language
+}
+
+i18n.loadAndSetLocale(navigatorLanguage)
 
 //TODO Do i automate route creation based on lib/const/Key ?
 m.route(root, "/", {

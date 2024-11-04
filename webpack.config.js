@@ -31,7 +31,8 @@ module.exports = {
       new webpack.ProvidePlugin({
         m: "mithril",
         "i18n": [path.resolve(path.join(__dirname, "/src/lib/i18n.js")), "i18n"],
-        "$t": [path.resolve(path.join(__dirname, "/src/lib/i18n.js")), "t"]
+        "$t": [path.resolve(path.join(__dirname, "/src/lib/i18n.js")), "t"],
+        "$td": [path.resolve(path.join(__dirname, "/src/lib/i18n.js")), "td"]
       }),
       new HtmlWebpackPlugin({
           template: "./index.html",

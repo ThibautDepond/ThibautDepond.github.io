@@ -1,4 +1,4 @@
-import rdf from "./data/rdf.json"
+import rdf from "./data/rdf/fr.json"
 
 const getRDFData = (subject) => {
     return rdf[subject] || null 

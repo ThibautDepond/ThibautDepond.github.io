@@ -99,7 +99,9 @@
                 "@type": "Role",
                 "roleName": "Stagiaire IT développeur",
                 "worksFor": {
-                    "@id":"organization/SGG"
+                    "@type": "Organization",
+                    "@id":"organization/SGG",
+                    "name": "Smart Global Governance"
                 },
                 "hasOccupation": {
                 	"@type": "Occupation",
@@ -114,7 +116,7 @@
             },
             {
                 "@type": "Role",
-                "roleName": "Stagiare",
+                "roleName": "Stagiaire",
                 "worksFor": {
                     "@type": "Organization",
                     "name": "Université de la Nouvelle-Calédonie",

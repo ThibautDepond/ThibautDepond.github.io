@@ -1,4 +1,7 @@
 export const JTM = (jsonContent, pageName) => {
+    let navigatorLanguage = i18n.DEFAULT_LANGUAGE
+    if (navigator.language != undefined) navigatorLanguage = navigator.language
+
     let nodes = []
     // sort article by date
     jsonContent.sort((a, b) => new Date(b.date) - new Date(a.date))
@@ -13,8 +16,8 @@ export const JTM = (jsonContent, pageName) => {
             let tmpChildNode = m(element.tag, $t(TKey))
             childs.push(tmpChildNode)
         }
-        childs.push(m(".to-right", article.date)) //TODO I18n compatible
-        let tmpNode = m(".content.my-6", childs)
+        childs.push(m(".to-right", $td(article.date))) //TODO I18n compatible
+        let tmpNode = m(".content.mt-1.mb-6", childs)
         nodes.push(tmpNode)
     }
     return nodes
