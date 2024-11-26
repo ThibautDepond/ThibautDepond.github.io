@@ -17,5 +17,10 @@
   "projects.01.name": "A strange cassette",
   "projects.01.description": "A simple cover art for 'The Most Mysterious Song Of The Internet'",
   "projects.02.name": "Tasmedosep",
-  "projects.02.description": "WIP"
+  "projects.02.description": "WIP",
+  "cv.details": "Details",
+  "cv.experience": "Professional Experience",
+  "cv.formation": "Courses",
+  "cv.languages": "Languages",
+  "cv.complementaryInfo": "Complementary Information"
 }
