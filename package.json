@@ -4,11 +4,11 @@
   "license": "MIT",
   "version": "0.2.0",
   "scripts": {
-    "serve": "webpack serve --mode=development",
+    "serve": "webpack serve --mode development",
     "gen:lang": "node ./.scripts/genLang.js",
     "gen:css": "sass ./src/style/mystyles.scss ./dist/style/tmp.css --no-source-map",
     "prebuild": "node ./.scripts/preBuild.js && yarn gen:lang",
-    "build": "webpack --mode=production",
+    "build": "webpack --mode production",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

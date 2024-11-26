@@ -25,6 +25,8 @@ export function td(date) {
 }
 
 function loadAndSetLocale(newLocale) {
+  newLocale = newLocale.split("-")[0] // remove any subtag country code
+  
   if (!SupportedLang.includes(newLocale)) {
     newLocale = DEFAULT_LOCALE
   }
@@ -37,6 +39,7 @@ function loadAndSetLocale(newLocale) {
     i18n.messages = messages;
     i18n.currentLocale = newLocale;
     i18n.status = Status.IDLE;
+    m.redraw.sync()
   });
 }
 

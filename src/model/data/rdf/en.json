@@ -4,12 +4,12 @@
         "@type": "Person",
         "name": "Thibaut Dépond",
         "@id": "thdep5",
-        "jobTitle": "Développeur Web Polyvalent",
+        "jobTitle": "Full Stack Web Developer",
         "contactPoints": [
             {
                 "@type": "ContactPoint",
                 "telephone": "+33 XX XX XX XX XX",
-                "contactType": "FR phone"
+                "contactType": "French phone"
             },
             {
                 "@type": "ContactPoint",
@@ -19,25 +19,25 @@
             {
                 "@type": "ContactPoint",
                 "telephone": "+687 XX XX XX",
-                "contactType": "NC phone"
+                "contactType": "New Caledonia phone"
             }
         ],
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Dumbéa",
             "postalCode": "98835",
-            "addressCountry": "NC"
+            "addressCountry": "New Caledonia"
         },
         "knowsLanguage": [
             {
                 "@type": "Language",
-                "name": "Français",
+                "name": "French",
                 "alternateName": "fr"
             },
             {
                 "@type": "Language",
                 "@id": "language/en",
-                "name": "Anglais",
+                "name": "English",
                 "alternateName": "en"
             }            
         ],
@@ -77,14 +77,14 @@
         "hasOccupation": [
             {
                 "@type": "Role",
-                "roleName": "Développeur Informatique",
+                "roleName": "IT Developer",
                 "hasOccupation": {
                 	"@type": "Occupation",
                 	"responsibilities": [
-                    	"Développement, dans le cadre d’une équipe agile, d’une application web Low-Code Frontend et Backend (VueJS Typescript / Golang)",
-                    	"Déploiement sous Docker",
-                      	"Automatisation des processus de développement",
-                      	"Approvisionnement d’utilisateur via l’implémentation de SCIM (rfc7644)"
+                    	"Development, as part of an agile team, of a Low-Code Frontend and Backend web application (VueJS Typescript / Golang)",
+                    	"Deployment under Docker",
+                      	"Automation of development processes",
+                      	"User provisioning through SCIM (rfc7644) implementation"
                   	]
                 },
                 "worksFor": {
@@ -97,7 +97,7 @@
             },
             {
                 "@type": "Role",
-                "roleName": "Stagiaire IT développeur",
+                "roleName": "IT Development Intern",
                 "worksFor": {
                     "@type": "Organization",
                     "@id":"organization/SGG",
@@ -106,9 +106,9 @@
                 "hasOccupation": {
                 	"@type": "Occupation",
                 	"responsibilities": [
-                    	"Développement, dans le cadre d’une équipe agile, d’une application web Low-Code (VueJS, Typescript)",
-                    	"Implémentation de Blockly dans le but de créé des règle JsonLogic pour étendre le possibilité de traitement de la données",
-                    	"Mise en place du processus de packaging et de déploiement de l’application"
+                    	"Development, as part of an agile team, of a Low-Code web application (VueJS, Typescript)",
+                    	"Implementation of Blockly to create JsonLogic rules for extending data processing capabilities",
+                    	"Setup of the application packaging and deployment process"
                 	]
                 },
                 "startDate": "2021-03",
@@ -116,19 +116,19 @@
             },
             {
                 "@type": "Role",
-                "roleName": "Stagiaire",
+                "roleName": "Intern",
                 "worksFor": {
                     "@type": "Organization",
-                    "name": "Université de la Nouvelle-Calédonie",
+                    "name": "University of New Caledonia",
                     "department": {
                         "@type": "Organization",
-                        "name": "Direction du Numérique et des Systèmes d’Information"
+                        "name": "Direction of Digital and Information Systems"
                     }
                 },
                 "hasOccupation": {
                 	"@type": "Occupation",
                 	"responsibilities": [
-                    	"Développement de la supervision des réseaux et des systèmes informatiques de l’UNC avec le logiciel Centreon"
+                    	"Development of the supervision of networks and computer systems of the UNC with the Centreon software"
                 	]
                 },
                 "startDate": "2018-11",
@@ -138,7 +138,7 @@
         "hasCertification": [
             {
                 "@type": "Certification",
-                "name": "EF SET english Certificate",
+                "name": "EF SET English Certificate",
                 "about": {
                     "@id": "language/en"
                 },
@@ -162,8 +162,8 @@
         "hasCredential": [
             {
                 "@type": "EducationalOccupationalCredential",
-                "name": "Master Informatique",
-                "credentialCategory": "diplome",
+                "name": "Master of Computer Science",
+                "credentialCategory": "diploma",
                 "recognizedBy": {
                     "@type": "EducationalOrganization",
                     "legalName": "École Polytech Nice - Université Côte d’Azur"
@@ -172,21 +172,21 @@
             },
             {
                 "@type": "EducationalOccupationalCredential",
-                "name": "Licence Informatique",
-                "credentialCategory": "diplome",
+                "name": "Bachelor of Computer Science",
+                "credentialCategory": "diploma",
                 "recognizedBy": {
                     "@type": "EducationalOrganization",
-                    "legalName": "Université de la Nouvelle-Calédonie "
+                    "legalName": "University of New Caledonia"
                 },
                 "temporal": "2017/2019"
             },
             {
                 "@type": "EducationalOccupationalCredential",
-                "name": "Permis de conduire (B)",
+                "name": "Driver's License (B)",
                 "credentialCategory": "administrative right",
                 "recognizedBy": {
                     "@type": "Organization",
-                    "legalName": "Direction des Infrastructures de la Topographie, des Transports Terrestres",
+                    "legalName": "Department of Infrastructure, Topography, and Land Transport",
                     "alternateName": "DITT"
                 },
                 "datePublished": "2017-12-04"

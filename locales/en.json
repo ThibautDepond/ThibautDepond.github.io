@@ -35,5 +35,12 @@
             "name": "Tasmedosep",
             "description": "WIP"
         }
+    },
+    "cv": {
+        "details": "Details",
+        "experience": "Professional Experience", 
+        "formation": "Courses",
+        "languages": "Languages",
+        "complementaryInfo": "Complementary Information"
     }
 }
