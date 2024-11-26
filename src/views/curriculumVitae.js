@@ -1,12 +1,14 @@
 import * as cpt from "../components"
 import * as model from "../model"
-import { Key } from "../lib"
+import { Key, SITENAME } from "../lib"
 
 let scriptElement = null
 let cvModule = null
 
 export const cv = {
     oninit: () => {
+        document.title = `${SITENAME} - ${Key.CV}`
+
         scriptElement = model.createJSONLDscript(Key.CV)
         cvModule = model.getCVModules()
         if (scriptElement != null) {

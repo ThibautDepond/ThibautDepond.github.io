@@ -42,5 +42,10 @@
         "formation": "Formation",
         "languages": "Langues",
         "complementaryInfo": "Informations Complémentaires"
+    },
+    "key": {
+        "home": "Accueil",
+        "projects": "Projets",
+        "cv": "CV"
     }
 }

@@ -1,3 +1,5 @@
+export const SITENAME = "Thibaut Dépond"
+
 export const Key = {
     CV: "cv",
     PROJECTS: "projects",

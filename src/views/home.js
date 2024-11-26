@@ -1,8 +1,11 @@
 import * as cpt from "../components"
 import * as model from "../model"
-import { Key } from "../lib"
+import { Key, SITENAME } from "../lib"
 
 export const home = {
+    oninit: () => {
+        document.title = `${SITENAME} - ${Key.HOME}`
+    },
     view: function() {
         return m("div",[
             m(cpt.navbar),

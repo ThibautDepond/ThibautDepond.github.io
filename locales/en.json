@@ -42,5 +42,10 @@
         "formation": "Courses",
         "languages": "Languages",
         "complementaryInfo": "Complementary Information"
+    },
+    "key": {
+        "home": "Home",
+        "projects": "Projects",
+        "cv": "CV"
     }
 }

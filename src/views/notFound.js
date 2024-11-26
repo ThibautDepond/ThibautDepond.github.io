@@ -1,8 +1,11 @@
 import * as cpt from "../components"
 import * as model from "../model"
-import { Key } from "../lib"
+import { Key, SITENAME } from "../lib"
 
 export const notFound = {
+    oninit: () => {
+        document.title = `${SITENAME} - ${Key.NOTFOUND}`
+    },
     view: function() {
         return m("div",[
             m(cpt.navbar),
