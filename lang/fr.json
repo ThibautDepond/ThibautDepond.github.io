@@ -22,5 +22,8 @@
   "cv.experience": "Experience Professionnelle",
   "cv.formation": "Formation",
   "cv.languages": "Langues",
-  "cv.complementaryInfo": "Informations Complémentaires"
+  "cv.complementaryInfo": "Informations Complémentaires",
+  "key.home": "Accueil",
+  "key.projects": "Projets",
+  "key.cv": "CV"
 }
