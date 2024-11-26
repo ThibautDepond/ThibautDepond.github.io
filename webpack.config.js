@@ -11,7 +11,8 @@ module.exports = {
         filename: 'js/bundle.js'
     },
     module: {
-        rules: [{
+        rules: [
+          {
           test: /\.scss$/,
           use: [
               MiniCssExtractPlugin.loader,
@@ -25,7 +26,12 @@ module.exports = {
                 }
               }
             ]
-        }]
+        },
+        {
+          test: /\.png/,
+          type: "asset/resource"
+        }
+      ]
     },
     plugins: [
       new webpack.ProvidePlugin({
@@ -38,7 +44,7 @@ module.exports = {
           template: "./index.html",
           inject: "body",
           filename: "index.html",
-          favicon: "./src/style/media/favicon.ico"
+          favicon: "./src/media/favicon.ico"
         }),
       new MiniCssExtractPlugin({
           filename: 'style/style.css'

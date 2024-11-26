@@ -91,7 +91,7 @@ const extractCourses = () => {
     ])
 }
 
-export const getCVModuleFromRdf = () => {
+export const getCVModules = () => {
     cvData = rdf[i18n.currentLocale || i18n.DEFAULT_LOCALE].cv
     return {
         person: extractPerson(),

@@ -7,7 +7,7 @@ export const notFound = {
         return m("div",[
             m(cpt.navbar),
             m("main.container", [
-                m(".box", Key.NOTFOUND),
+                m(".box.title.is-xxx-large.is-flex.justify-content-center", Key.NOTFOUND),
             ]) 
         ])
     }

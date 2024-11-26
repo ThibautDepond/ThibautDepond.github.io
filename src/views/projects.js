@@ -6,8 +6,8 @@ export const projects = {
     view: function() {
         return m("div",[
             m(cpt.navbar),
-            m("main.container", [
-                m(".box", Key.PROJECTS),
+            m("main.projects.container.is-flex.flex-direction-row.flex-wrap-wrap.justify-content-space-evenly", [
+                model.getProjects()
             ]) 
         ])
     }

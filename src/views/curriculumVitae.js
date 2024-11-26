@@ -8,7 +8,7 @@ let cvModule = null
 export const cv = {
     oninit: () => {
         scriptElement = model.createJSONLDscript(Key.CV)
-        cvModule = model.getCVModuleFromRdf()
+        cvModule = model.getCVModules()
         if (scriptElement != null) {
             document.head.appendChild(scriptElement)
         }
@@ -41,7 +41,7 @@ export const cv = {
         ])
     },
     onupdate: () => {
-        cvModule = model.getCVModuleFromRdf()
+        cvModule = model.getCVModules()
     },
     onremove: () => {
         if (scriptElement != null) {

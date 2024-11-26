@@ -7,7 +7,7 @@ export const home = {
         return m("div",[
             m(cpt.navbar),
             m("main.container", [
-                m(cpt.card, Key.HOME, model.dataLoader(Key.HOME)),
+                m(cpt.card, Key.HOME, model.getContent(Key.HOME)),
             ])
         ])
     }

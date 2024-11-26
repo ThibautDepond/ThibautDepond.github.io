@@ -1,3 +1,4 @@
-export {dataLoader} from "./content"
+export {getContent} from "./content"
+export {getProjects} from "./projects"
 export {createJSONLDscript} from "./rdf"
-export {getCVModuleFromRdf} from "./curriculumVitae"
+export {getCVModules} from "./curriculumVitae"
