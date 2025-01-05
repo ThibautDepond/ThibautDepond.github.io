@@ -1,6 +1,7 @@
 import * as cpt from "../components"
 import * as model from "../model"
 import { Key, SITENAME } from "../lib"
+import { ThibautDepond_CV_2024 } from "../media/file" 
 
 let scriptElement = null
 let cvModule = null
@@ -19,8 +20,11 @@ export const cv = {
         return m("div",[
             m(cpt.navbar),
             m("main.container", [
+                m("div.box.m-2", [
+                    m("span", $t(`${Key.CV}.info.text`) + " "),
+                    m("a", {href: ThibautDepond_CV_2024,target: "_blank"}, $t(`${Key.CV}.info.link`)),
+                ]),
                 m(cpt.card,
-                    Key.CV,
                     m(".columns.reverse-on-breakpoint", [
                         m(".column.is-one-third", [
                             cvModule.details,

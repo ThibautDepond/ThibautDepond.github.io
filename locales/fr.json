@@ -37,6 +37,10 @@
         }
     },
     "cv": {
+        "info": {
+            "text": "Vous trouverez ici mon",
+            "link": "CV complet (pdf)"
+        },
         "details": "Details",
         "experience": "Experience Professionnelle", 
         "formation": "Formation",

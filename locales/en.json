@@ -37,6 +37,10 @@
         }
     },
     "cv": {
+        "info": {
+            "text": "Here, you'll find my",
+            "link": "complete resume (pdf)"
+        },
         "details": "Details",
         "experience": "Professional Experience", 
         "formation": "Courses",

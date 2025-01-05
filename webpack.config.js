@@ -30,6 +30,13 @@ module.exports = {
         {
           test: /\.png/,
           type: "asset/resource"
+        },
+        {
+          test: /\.pdf/,
+          type: "asset/resource",
+          generator: {
+            filename: 'files/[name][ext]', 
+          }
         }
       ]
     },

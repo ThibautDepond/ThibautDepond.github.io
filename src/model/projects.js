@@ -8,7 +8,7 @@ const projects = content.projects
 export const getProjects = () => {
     const projectList = []
     for (const project of projects) {
-        let aProject = m(".box.w-40.is-flex.flex-direction-row", [
+        let aProject = m(".box", [
             m(".is-flex.align-items-center.no-select", 
                 m("figure.m-0.x128.no-select", [
                     m("img.no-select", { src: media.projects[`img${project.ID}`] })

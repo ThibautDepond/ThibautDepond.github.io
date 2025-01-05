@@ -7,10 +7,12 @@ export const home = {
         document.title = `${SITENAME} - ${Key.HOME}`
     },
     view: function() {
+        const contents = model.getContent(Key.HOME)
+
         return m("div",[
             m(cpt.navbar),
             m("main.container", [
-                m(cpt.card, Key.HOME, model.getContent(Key.HOME)),
+                contents,
             ])
         ])
     }

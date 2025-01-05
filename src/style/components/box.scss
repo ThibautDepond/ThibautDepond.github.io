@@ -1,3 +1,5 @@
+@use "../utilities/mediaSize" as ms;
+
 .box {
     background-color: var(--scheme-bg);
     border-radius: 0.75em;
@@ -9,5 +11,12 @@
     .box {
         height: 128px;
         width: 40%;
+        display: flex;
+        flex-direction: row;
+    }
+    @include ms.until( ms.$desktop) {
+        .box {
+          flex-direction: column;
+        }
     }
 }
