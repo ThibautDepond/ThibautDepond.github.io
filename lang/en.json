@@ -18,6 +18,10 @@
   "projects.01.description": "A simple cover art for 'The Most Mysterious Song Of The Internet'",
   "projects.02.name": "Tasmedosep",
   "projects.02.description": "WIP",
+  "cv.info.text": "Here, you'll find my",
+  "cv.info.link": "complete resume (pdf)",
+  "cv.info.modal.title": "why a 'complete resume' ?",
+  "cv.info.modal.content": "The resume here is rendered from the content of a JSON-LD hidden in the header of this page.\n\nSo why is it not complete ?\n\n Because I wanted to use the Resource Description Framework (RDF) to 'describe' my resume and so decided to use the schema.org vocabulary. And while this vocabulary is great it is'nt made for describing a resume, it's possible to make do with schema.org but it's missing some predicates and link between subjects.",
   "cv.details": "Details",
   "cv.experience": "Professional Experience",
   "cv.formation": "Courses",
@@ -25,5 +29,6 @@
   "cv.complementaryInfo": "Complementary Information",
   "key.home": "Home",
   "key.projects": "Projects",
-  "key.cv": "CV"
+  "key.cv": "CV",
+  "buttons.close": "Close"
 }
