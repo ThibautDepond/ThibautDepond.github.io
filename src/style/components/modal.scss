@@ -1,0 +1,16 @@
+@use "../utilities/mediaSize" as ms;
+
+.modal {
+	text-align: center;
+	box-shadow: 0 0 1em var(--text-inv);
+    width: 100%;
+    @include ms.from( ms.$desktop) {
+        width: 50%;
+    }
+    @include ms.until( ms.$desktop) {
+        width: 100%;
+    }
+    .content {
+        text-align: justify;
+    }
+}

@@ -39,7 +39,11 @@
     "cv": {
         "info": {
             "text": "Here, you'll find my",
-            "link": "complete resume (pdf)"
+            "link": "complete resume (pdf)",
+            "modal": {
+                "title": "why a 'complete resume' ?",
+                "content": "The resume here is rendered from the content of a JSON-LD hidden in the header of this page.\n\nSo why is it not complete ?\n\n Because I wanted to use the Resource Description Framework (RDF) to 'describe' my resume and so decided to use the schema.org vocabulary. And while this vocabulary is great it is'nt made for describing a resume, it's possible to make do with schema.org but it's missing some predicates and link between subjects."
+            }
         },
         "details": "Details",
         "experience": "Professional Experience", 
@@ -51,5 +55,8 @@
         "home": "Home",
         "projects": "Projects",
         "cv": "CV"
+    },
+    "buttons": {
+        "close": "Close"
     }
 }

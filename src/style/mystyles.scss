@@ -83,6 +83,12 @@ figure {
 .button {
     padding: .5rem;
     border-radius: .25rem;
+    border: none;
+    cursor: pointer;
+}
+
+.show-white-space {
+    white-space: pre-wrap;
 }
 
 .no-select {

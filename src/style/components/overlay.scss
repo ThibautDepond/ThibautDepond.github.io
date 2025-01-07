@@ -1,0 +1,36 @@
+$overlay-h: var(--text-h) !default;
+$overlay-s: var(--text-s) !default;
+$overlay-l: var(--text-l) !default;
+$overlay-a: 0.8 !default;
+
+@keyframes fade-in {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes fade-out {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+
+.overlay {
+    z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: hsla(
+        #{$overlay-h},
+        #{$overlay-s},
+        #{$overlay-l},
+        #{$overlay-a}
+      );;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: fade-in 0.5s;
+}
+.overlay.hide {
+	animation: fade-out 0.5s;
+}

@@ -55,7 +55,7 @@
     @include themify(light.$colors, light.$fixed-colors);
 
     @include extract-hsl("link", map.get(light.$colors, "link"));
-    @include extract-hsl("link", map.get(light.$colors, "text"));
+    @include extract-hsl("text", map.get(light.$colors, "text"));
     @include extract-hsl("scheme-bg", map.get(light.$fixed-colors, "scheme-bg"));
     @include extract-hsl("background", map.get(light.$fixed-colors, "background"));
 
@@ -70,7 +70,7 @@
     @include themify(dark.$colors, dark.$fixed-colors);
 
     @include extract-hsl("link", map.get(dark.$colors, "link"));
-    @include extract-hsl("link", map.get(dark.$colors, "text"));
+    @include extract-hsl("text", map.get(dark.$colors, "text"));
     @include extract-hsl("scheme-bg", map.get(dark.$fixed-colors, "scheme-bg"));
     @include extract-hsl("background", map.get(dark.$fixed-colors, "background"));
 

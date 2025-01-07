@@ -63,7 +63,6 @@ export const navbar = {
         ])
     },
     onbeforeremove: function () {
-        console.log("remove")
         document.removeEventListener("DOMContentLoaded", handleBurger)
     },
 }

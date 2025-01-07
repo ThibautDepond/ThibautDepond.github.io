@@ -39,7 +39,11 @@
     "cv": {
         "info": {
             "text": "Vous trouverez ici mon",
-            "link": "CV complet (pdf)"
+            "link": "CV complet (pdf)",
+            "modal": {
+                "title": "Pourquoi un 'CV complet' ?",
+                "content": "Ce CV est affiché à partir des informations d'un JSON-LD caché dans les en-têtes de cette page.\n\nDucoup, pourquoi n'est-il pas complet ?\n\nJ'avais l'intention d'employer le Resource Description Framework (RDF), afin de « décrire » mon CV, c'est pourquoi j'ai opté pour le vocabulaire de schema.org. Et bien que ce vocabulaire soit assez diversifié, il n'est pas fait pour décrire des CV. Il est possible, avec ce vocabulaire, d'obtenir un résultat « satisfaisant », mais il manquera toujours des prédicats et des liens précis entre certains sujets."
+            }
         },
         "details": "Details",
         "experience": "Experience Professionnelle", 
@@ -51,5 +55,8 @@
         "home": "Accueil",
         "projects": "Projets",
         "cv": "CV"
+    },
+    "buttons": {
+        "close": "Fermer"
     }
 }

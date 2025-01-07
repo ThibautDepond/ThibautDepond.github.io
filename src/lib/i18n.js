@@ -11,6 +11,7 @@ export const i18n = {
 }
 
 export function t(key) {
+  console.log(i18n.messages[key])
   return i18n.messages[key] || key;
 }
 
